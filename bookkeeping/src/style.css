@@ -1,0 +1,103 @@
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: inherit;
+  background: #f7f7fb;
+  color: #212529;
+}
+
+#app { max-width: 1040px; margin: 0 auto; padding: 20px; }
+
+/* Navigation */
+.nav-bar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e9ecef;
+  background: #ffffff;
+}
+.nav-link {
+  color: #555;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin: 4px 8px;
+  display: inline-block;
+}
+.nav-link.active,
+.nav-link:hover { color: #1f8a59; background: #f0fbf4; }
+
+/* Expenses page */
+.expenses { background: #fff; border-radius: 10px; box-shadow: 0 6px 18px rgba(16,24,40,0.06); padding: 18px; }
+.expenses h1 { margin: 0 0 10px 0; font-size: 20px; }
+.input-section { display:flex; gap:8px; align-items:center; margin-bottom:12px; }
+.input-section input[type="number"], .input-section select { padding:8px 10px; border:1px solid #ddd; border-radius:8px; }
+.input-section button { padding:8px 12px; border-radius:8px; border:none; background:#1f8a59; color:#fff; cursor:pointer; }
+.input-section button:hover { background:#166a44 }
+
+.expense-list { list-style:none; margin:0; padding:0; }
+.expense-list li { padding:10px 0; border-bottom:1px solid #f0f0f0; display:flex; justify-content:space-between; }
+.expense-list .cat { color:#1f8a59; font-weight:600 }
+.expense-list .amt { color:#222; font-weight:600 }
+.small { color: #6b7280; font-size: 0.85rem; margin-top:4px }
+
+.total { margin-top:12px; font-weight:700; }
+
+/* History page */
+.expense-history { background:#fff; border-radius:10px; padding:16px; box-shadow:0 6px 18px rgba(16,24,40,0.06); }
+.expense-history h1 { margin:0 0 8px 0 }
+.history-list { margin-top:8px }
+.history-list .item { padding:10px 0; border-bottom:1px solid #f0f0f0; display:flex; justify-content:space-between }
+
+/* small responsive */
+@media (max-width:640px){
+  .input-section{ flex-direction:column; align-items:stretch }
+  /* Make input groups wrap nicely on small screens */
+  .input-group{ flex-wrap: wrap; gap: 8px }
+  .input-group .amount-input{ width: 100%; flex: 1 1 100% }
+  .input-group .category-input{ width: 100% !important }
+  .input-group .category-input select{ width: 50%; min-width: 140px }
+  .input-group .category-input input{ width: 50%; min-width: 140px }
+  .input-section input[type="text"]{ width: 100% }
+  .input-section button{ width: 100% }
+
+  /* List items stack content vertically */
+  .expense-list li{ flex-direction: column; gap: 6px }
+  .expense-content{ flex-direction: column; align-items: flex-start; gap: 6px }
+  .amount-display{ display: flex; gap: 8px; flex-wrap: wrap; align-items: center }
+  .action-buttons{ flex-wrap: wrap }
+  .edit-buttons{ flex-wrap: wrap }
+  .expense-note{ width: 100%; padding-left: 0; margin-left: 0 }
+
+  /* Buttons slightly smaller */
+  .btn{ padding: 0 12px; height: 32px; font-size: 14px }
+
+  /* Chart controls wrap and inputs fill width */
+  .chart-controls{ flex-wrap: wrap; row-gap: 8px }
+  .chart-controls .filter-group{ flex: 1 1 100%; flex-wrap: wrap; gap: 6px }
+  .chart-controls .filter-group input[type="date"]{ flex: 1 1 45%; min-width: 120px }
+  .chart-controls button{ flex: 1 1 auto }
+  .chart-card{ height: auto; min-height: 320px; max-height: 500px }
+
+  /* Ensure containers don't cause horizontal scroll */
+  #app{ padding: 10px; max-width: 100% }
+  .expenses, .expense-history, .chart-card{ padding: 12px; overflow: hidden }
+}
+
+@media (max-width:400px){
+  .nav-bar{ flex-wrap: wrap; gap: 6px }
+  .nav-link{ padding: 6px 10px; font-size: 14px }
+  .btn{ padding: 0 10px; font-size: 13px; height: 30px }
+  .chart-controls .filter-group label{ font-size: 13px }
+  .chart-controls .filter-group input[type="date"]{ font-size: 13px; padding: 3px 6px }
+}
+
