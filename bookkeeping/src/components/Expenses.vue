@@ -272,12 +272,33 @@ button {
   background-color: #007979;
 }
 
+.btn-add:hover {
+  background-color: #ffffff;
+  color: #007979;
+  border: 1px solid #007979;
+  filter: none;
+}
+
 .btn-edit {
-  background-color: #005AB5;
+  background-color: #2c4a8b;
 }
 
 .btn-delete {
-  background-color: #D94600;
+  background-color: #d63930;
+}
+
+.btn-edit:hover {
+  background-color: #ffffff;
+  color: #2c4a8b;
+  border: 1px solid #2c4a8b;
+  filter: none;
+}
+
+.btn-delete:hover {
+  background-color: #ffffff;
+  color: #d63930;
+  border: 1px solid #d63930;
+  filter: none;
 }
 
 .btn-save {

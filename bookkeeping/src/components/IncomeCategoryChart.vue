@@ -104,7 +104,7 @@ function buildChart() {
       options: {
       responsive: true,
       maintainAspectRatio: true,
-      aspectRatio: chartType.value === 'pie' ? 1.8 : 1.5,
+      aspectRatio: chartType.value === 'pie' ? 1 : 1.5,
       plugins: {
         legend: {
           position: chartType.value === 'pie' ? 'right' as const : 'bottom' as const,
