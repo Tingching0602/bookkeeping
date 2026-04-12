@@ -173,12 +173,12 @@ const groupedExpenses = computed(() => {
 <style scoped>
 .input-section {
   display: flex;
-  gap: 8px;
+  gap: 14px;
 }
 
 .input-group {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   align-items: flex-start;
   width: 100%;
 }
@@ -311,12 +311,12 @@ button {
 
 .action-buttons {
   display: flex;
-  gap: 8px;
+  gap: 10px;
 }
 
 .edit-buttons {
   display: flex;
-  gap: 8px;
+  gap: 12px;
   margin-top: 8px;
 }
 

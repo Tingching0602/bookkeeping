@@ -25,8 +25,12 @@ onMounted(async () => {
     <nav class="nav-bar">
       <router-link to="/input" class="nav-link" :class="{ active: $route.path === '/input' }">支出記錄</router-link>
       <router-link to="/income" class="nav-link" :class="{ active: $route.path === '/income' }">收入記錄</router-link>
+      <router-link to="/debt" class="nav-link" :class="{ active: $route.path === '/debt' }">債務</router-link>
+      <router-link to="/repayment" class="nav-link" :class="{ active: $route.path === '/repayment' }">還款</router-link>
       <router-link to="/history" class="nav-link" :class="{ active: $route.path === '/history' }">支出歷史</router-link>
       <router-link to="/income-history" class="nav-link" :class="{ active: $route.path === '/income-history' }">收入歷史</router-link>
+      <router-link to="/debt-history" class="nav-link" :class="{ active: $route.path === '/debt-history' }">債務歷史</router-link>
+      <router-link to="/repayment-history" class="nav-link" :class="{ active: $route.path === '/repayment-history' }">還款歷史</router-link>
     </nav>
     <main id="app">
       <RouterView />

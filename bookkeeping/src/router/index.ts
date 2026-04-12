@@ -3,6 +3,10 @@ import Expenses from '../components/Expenses.vue'
 import Income from '../components/Income.vue'
 import ExpenseHistory from '../components/ExpenseHistory.vue'
 import IncomeHistory from '../components/IncomeHistory.vue'
+import Debt from '../components/Debt.vue'
+import DebtHistory from '../components/DebtHistory.vue'
+import Repayment from '../components/Repayment.vue'
+import RepaymentHistory from '../components/RepaymentHistory.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -22,6 +26,11 @@ const router = createRouter({
       component: Income
     },
     {
+      path: '/debt',
+      name: 'debt',
+      component: Debt
+    },
+    {
       path: '/history',
       name: 'history',
       component: ExpenseHistory
@@ -30,6 +39,21 @@ const router = createRouter({
       path: '/income-history',
       name: 'income-history',
       component: IncomeHistory
+    },
+    {
+      path: '/debt-history',
+      name: 'debt-history',
+      component: DebtHistory
+    },
+    {
+      path: '/repayment',
+      name: 'repayment',
+      component: Repayment
+    },
+    {
+      path: '/repayment-history',
+      name: 'repayment-history',
+      component: RepaymentHistory
     }
   ]
 })

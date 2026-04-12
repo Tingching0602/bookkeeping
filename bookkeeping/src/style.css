@@ -35,7 +35,7 @@ body {
 .nav-bar {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px;
   align-items: center;
   padding: 12px;
   border-radius: 18px;
@@ -89,7 +89,7 @@ body {
   gap: 10px;
   align-items: center;
   margin-bottom: 12px;
-  padding: 10px;
+  padding: 12px 14px;
   border-radius: 14px;
   background: #f4f7fb;
   border: 1px solid var(--line);
@@ -224,11 +224,16 @@ body {
   color: #ffffff;
 }
 
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
 /* small responsive */
 @media (max-width:640px){
   #app{ padding: 12px; max-width: 100% }
   .input-section{ flex-direction:column; align-items:stretch }
-  .input-group{ flex-wrap: wrap; gap: 8px }
+  .input-group{ flex-wrap: wrap; gap: 5px }
   .input-group .amount-input{ width: 100%; flex: 1 1 100% }
   .input-group .category-input{ width: 100% !important }
   .input-group .category-input select{ width: 50%; min-width: 140px }
